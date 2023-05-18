@@ -58,7 +58,7 @@ const Login = () => {
         <h3>
           New to <Link to='/'>Infinity Toys</Link>?
           <Link
-            to='/login'
+            to='/register'
             className='underline decoration-sky-600 decoration-2 hover:decoration-blue-400'
           >
             Register Here
