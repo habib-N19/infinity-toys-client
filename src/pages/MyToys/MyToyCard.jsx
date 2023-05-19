@@ -1,25 +1,28 @@
 import React from 'react'
 
-const MyToyCard = () => {
+const MyToyCard = ({ myToy }) => {
+  const { _id, name, sellerName, sub_category, price, quantity, photo } = myToy
   return (
     <tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
       <td class='w-32 p-4'>
-        <img src='/docs/images/products/apple-watch.png' alt='Apple Watch' />
+        <img src={photo} />
       </td>
-      <td class='px-6 py-4 font-semibold text-gray-900 dark:text-white'>
-        Apple Watch
+      <td class='px-1 py-4 font-semibold text-gray-900 dark:text-white'>
+        {name}
       </td>
-      <td class='px-6 py-4'></td>
-      <td class='px-6 py-4 font-semibold text-gray-900 dark:text-white'>
-        $599
+      <td class='px-1 py-4 font-semibold text-gray-900 dark:text-white'>
+        {sellerName}
       </td>
-      <td class='px-6 py-4'>
-        <a
-          href='#'
-          class='font-medium text-red-600 dark:text-red-500 hover:underline'
-        >
-          Remove
-        </a>
+      <td class='px-1 py-4'>{sub_category}</td>
+      <td class='px-1 py-4 font-semibold text-gray-900 dark:text-white md:text-lg'>
+        ${price}
+      </td>
+      <td class='px-1 py-4 font-semibold text-gray-900 dark:text-white md:text-lg'>
+        {quantity}
+      </td>
+      <td class='px-0 py-4'>
+        <button className='btn btn-success mr-3'>Update</button>
+        <button className='btn btn-warning  '>x</button>
       </td>
     </tr>
   )
