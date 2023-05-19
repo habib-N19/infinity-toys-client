@@ -54,7 +54,7 @@ const NavigationBar = () => {
   )
   return (
     <div>
-      <nav className='bg-white dark:bg-gray-800 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
+      <nav className='bg-white dark:bg-gray-800 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
         <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <Link to='/' className='flex items-center'>
             <img
@@ -84,12 +84,12 @@ const NavigationBar = () => {
               <label tabIndex={0} className='btn btn-ghost md:hidden'>
                 <FaBars></FaBars>
               </label>
-              <ul
+              {/* <ul
                 tabIndex={0}
                 className=' dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
               >
                 {navBarItems}
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div
