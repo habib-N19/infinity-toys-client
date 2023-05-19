@@ -3,11 +3,14 @@ import Main from '../Layout/Main'
 import Login from '../pages/Login/Login'
 import Register from '../pages/SignUp/Register'
 import Blogs from '../pages/Blogs/Blogs'
+import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import AddNewToy from '../pages/AddNewToy/AddNewToy'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/login',
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blogs></Blogs>
+      },
+      {
+        path: '/addNewToy',
+        element: <AddNewToy></AddNewToy>
       }
     ]
   }
