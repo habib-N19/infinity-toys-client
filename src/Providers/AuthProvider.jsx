@@ -40,15 +40,6 @@ const AuthProvider = ({ children }) => {
     return signOut(auth)
   }
 
-  // context provider user
-  const authUser = {
-    loading,
-    user,
-    createUserWithEmail,
-    signInWithEmail,
-    signInWithGoogleAuth,
-    logOut
-  }
   //adding an observer for monitoring the state of the user logged in or not
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -60,6 +51,15 @@ const AuthProvider = ({ children }) => {
       return unsubscribe()
     }
   }, [])
+  // context provider user
+  const authUser = {
+    loading,
+    user,
+    createUserWithEmail,
+    signInWithEmail,
+    signInWithGoogleAuth,
+    logOut
+  }
 
   return (
     <AuthContext.Provider value={authUser}>{children}</AuthContext.Provider>
