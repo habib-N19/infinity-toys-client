@@ -7,6 +7,7 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import AddNewToy from '../pages/AddNewToy/AddNewToy'
 import AllToys from '../pages/AllToys/AllToys'
 import ToyDetails from '../pages/toyDetails/ToyDetails'
+import MyToys from '../pages/MyToys/MyToys'
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/allToys/${params.id}`)
       },
       {
-        path: 
+        path: '/myToys',
+        element: <MyToys></MyToys>
       }
     ]
   }

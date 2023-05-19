@@ -17,12 +17,12 @@ const ToyDetails = () => {
   console.log(toyDetails.name)
   return (
     <div>
-      <div class='w-full max-w-sm mx-auto md:mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-        <img class='p-8 rounded-t-lg' src={photo} alt='product image' />
+      <div className='w-full max-w-sm mx-auto md:mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+        <img className='p-8 rounded-t-lg' src={photo} alt='product image' />
 
-        <div class='px-5 pb-5'>
+        <div className='px-5 pb-5'>
           <div>
-            <h5 class='text-xl font-semibold tracking-tight text-gray-900 dark:text-white'>
+            <h5 className='text-xl font-semibold tracking-tight text-gray-900 dark:text-white'>
               {name}
             </h5>
             <small>Seller: {sellerName}</small>
@@ -30,11 +30,11 @@ const ToyDetails = () => {
             <p>{details}</p>
           </div>
 
-          <div class='flex items-center justify-between'>
-            <span class='text-3xl font-bold text-gray-900 dark:text-white'>
+          <div className='flex items-center justify-between'>
+            <span className='text-3xl font-bold text-gray-900 dark:text-white'>
               ${price}
             </span>
-            <span class='text-3xl font-bold text-gray-900 dark:text-white'>
+            <span className='text-3xl font-bold text-gray-900 dark:text-white'>
               {rating}
             </span>
           </div>
