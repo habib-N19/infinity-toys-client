@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Gallery = () => {
   return (
     <div>
       <div className='grid grid-cols-2 my-10 md:grid-cols-4 w-11/12 mx-auto gap-4'>
         <div className='grid gap-4'>
-          <div>
+          <div data-aos='fade-right'>
             <img
               className='h-auto max-w-full rounded-lg'
               src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg'

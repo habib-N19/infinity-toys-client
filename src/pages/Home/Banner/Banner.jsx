@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     closeBanner && (
       <div
-        tabindex='-1'
+        tabIndex='-1'
         className='fixed mt-20 h-[100px] z-50 flex flex-col md:flex-row justify-between w-[calc(100%-4rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600'
       >
         <div className='flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0'>
