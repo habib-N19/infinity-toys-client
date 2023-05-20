@@ -7,43 +7,43 @@ const Banner = () => {
     closeBanner && (
       <div
         tabindex='-1'
-        class='fixed mt-20 h-[100px] z-50 flex flex-col md:flex-row justify-between w-[calc(100%-4rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600'
+        className='fixed mt-20 h-[100px] z-50 flex flex-col md:flex-row justify-between w-[calc(100%-4rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600'
       >
-        <div class='flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0'>
+        <div className='flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0'>
           <Link
             to='/'
-            class='flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0 dark:border-gray-600'
+            className='flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0 dark:border-gray-600'
           >
-            <img src={logo} class='h-6 mr-2' alt='Flowbite Logo' />
-            <span class='self-center text-lg font-semibold whitespace-nowrap dark:text-white'>
+            <img src={logo} className='h-6 mr-2' alt='Flowbite Logo' />
+            <span className='self-center text-lg font-semibold whitespace-nowrap dark:text-white'>
               Infinity Toys
             </span>
           </Link>
-          <p class='flex items-center text-sm font-normal text-gray-500 dark:text-gray-400'>
+          <p className='flex items-center text-sm font-normal text-gray-500 dark:text-gray-400'>
             Add your own toys to the market. Create an account now!
           </p>
         </div>
-        <div class='flex items-center flex-shrink-0'>
+        <div className='flex items-center flex-shrink-0'>
           <Link
             to='/login'
-            class='px-5 py-3 mr-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg-orange-700 focus:outline-none dark:focus:ring-blue-800'
+            className='px-5 py-3 mr-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg-orange-700 focus:outline-none dark:focus:ring-blue-800'
           >
             Sign In
           </Link>
           <Link
             to='/register'
-            class='px-5 py-3 mx-3 text-xs font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+            className='px-5 py-3 mx-3 text-xs font-medium text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
           >
             Sign up
           </Link>
           <button
             onClick={() => setCloseBanner(false)}
             type='button'
-            class='absolute top-2.5 right-2.5 md:relative md:top-auto md:right-auto flex-shrink-0 inline-flex justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white'
+            className='absolute top-2.5 right-2.5 md:relative md:top-auto md:right-auto flex-shrink-0 inline-flex justify-center items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white'
           >
             <svg
               aria-hidden='true'
-              class='w-4 h-4'
+              className='w-4 h-4'
               fill='currentColor'
               viewBox='0 0 20 20'
               xmlns='http://www.w3.org/2000/svg'
@@ -54,7 +54,7 @@ const Banner = () => {
                 clipRule='evenodd'
               ></path>
             </svg>
-            <span class='sr-only'>Close banner</span>
+            <span className='sr-only'>Close banner</span>
           </button>
         </div>
       </div>
