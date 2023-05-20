@@ -8,7 +8,7 @@ const ToyDetails = () => {
     name,
     email,
     sellerName,
-    sub_category,
+    subCategory,
     price,
     rating,
     quantity,

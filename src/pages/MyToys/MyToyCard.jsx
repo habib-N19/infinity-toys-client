@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MyToyCard = ({ myToy }) => {
-  const { _id, name, sellerName, sub_category, price, quantity, photo } = myToy
+  const { _id, name, sellerName, subCategory, price, quantity, photo } = myToy
 
   const handleToyDelete = id => {
     fetch(`http://localhost:5000/myToys/${id}`, {
@@ -24,7 +24,7 @@ const MyToyCard = ({ myToy }) => {
         <td className='px-1 py-4 font-semibold text-gray-900 dark:text-white'>
           {sellerName}
         </td>
-        <td className='px-1 py-4'>{sub_category}</td>
+        <td className='px-1 py-4'>{subCategory}</td>
         <td className='px-1 py-4 font-semibold text-gray-900 dark:text-white md:text-lg'>
           ${price}
         </td>
