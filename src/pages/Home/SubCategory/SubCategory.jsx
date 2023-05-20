@@ -4,7 +4,7 @@ import 'react-tabs/style/react-tabs.css'
 
 const SubCategory = () => {
   const [toyData, setToyData] = useState([])
-  const [category, setCategory] = useState('marvel')
+  const [category, setCategory] = useState('marvel ')
   useEffect(() => {
     fetch(`http://localhost:5000/category?subCategory=${category}`)
       .then(res => res.json())
