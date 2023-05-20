@@ -14,7 +14,7 @@ Welcome to Infinity Toy Store! This repository contains the source code for a to
 
 ## Live Link
 
-Here is the live link to the Infinity Toy Store: [Infinity Toy Store Live Link](link)
+Here is the live link to the Infinity Toy Store: [Infinity Toy Store Live Link]( https://infinity-toy-store.web.app)
 
 Feel free to explore the application!
 
