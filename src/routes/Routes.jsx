@@ -9,6 +9,7 @@ import AllToys from '../pages/AllToys/AllToys'
 import ToyDetails from '../pages/toyDetails/ToyDetails'
 import MyToys from '../pages/MyToys/MyToys'
 import UpdateMyToy from '../pages/MyToys/UpdateMyToy'
+import Home from '../pages/Home/Home/Home'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
       {
         path: '/login',
         element: <Login></Login>
