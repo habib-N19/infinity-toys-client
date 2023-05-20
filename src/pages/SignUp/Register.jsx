@@ -3,6 +3,7 @@ import { FaEnvelope, FaImage, FaUserEdit, FaUserShield } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../Providers/AuthProvider'
 import SocialLogin from '../shared/SocialLogin/SocialLogin'
+import { Helmet } from 'react-helmet'
 const Register = () => {
   const { createUserWithEmail } = useContext(AuthContext)
   const handleSignUp = event => {
@@ -20,6 +21,9 @@ const Register = () => {
   }
   return (
     <div className='w-1/2 mx-auto'>
+      <Helmet>
+        <title>Infinity | Register</title>
+      </Helmet>
       <form onSubmit={handleSignUp} className='space-y-4'>
         {/* name */}
         <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>

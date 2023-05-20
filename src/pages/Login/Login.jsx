@@ -3,6 +3,7 @@ import { FaEnvelope, FaUserEdit, FaUserShield } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../Providers/AuthProvider'
 import SocialLogin from '../shared/SocialLogin/SocialLogin'
+import { Helmet } from 'react-helmet'
 
 const Login = () => {
   const { signInWithEmail } = useContext(AuthContext)
@@ -20,6 +21,9 @@ const Login = () => {
   }
   return (
     <div className='w-9/12 md:w-1/3 mx-auto'>
+      <Helmet>
+        <title>Infinity | Login</title>
+      </Helmet>
       <form onSubmit={handleLogIn} className='space-y-4'>
         {/* email */}
 

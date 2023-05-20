@@ -1,8 +1,12 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Blogs = () => {
   return (
     <div className='w-8/12 mx-auto'>
+      <Helmet>
+        <title>Infinity | Blogs</title>
+      </Helmet>
       <h3 className='text-center text-2xl font-bold mb-16'>Blog</h3>
       <div>
         {/* q-1 */}

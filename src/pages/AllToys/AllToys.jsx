@@ -23,7 +23,7 @@ const AllToys = () => {
   return (
     <div>
       <Helmet>
-        <title>All Toys</title>
+        <title>Infinity | All Toys</title>
       </Helmet>
       <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
         <div className=' p-2 text-center'>

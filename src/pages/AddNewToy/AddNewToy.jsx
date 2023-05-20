@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../Providers/AuthProvider'
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet'
 
 const AddNewToy = () => {
   const { user } = useContext(AuthContext)
@@ -52,6 +53,9 @@ const AddNewToy = () => {
   }
   return (
     <div className=' w-11/12 md:w-1/2 lg:w-1/3 mx-auto'>
+      <Helmet>
+        <title>Infinity | Add New</title>
+      </Helmet>
       <form onSubmit={handleAddToy}>
         <div className='relative z-0 w-full my-6 group '>
           <input

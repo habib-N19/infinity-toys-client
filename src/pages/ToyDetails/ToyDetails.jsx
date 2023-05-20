@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { useLoaderData } from 'react-router-dom'
 
 const ToyDetails = () => {
@@ -17,6 +18,9 @@ const ToyDetails = () => {
   console.log(toyDetails.name)
   return (
     <div>
+      <Helmet>
+        <title>Infinity |Toy Details</title>
+      </Helmet>
       <div className='w-full max-w-sm mx-auto md:mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
         <img className='p-8 rounded-t-lg' src={photo} alt='product image' />
 

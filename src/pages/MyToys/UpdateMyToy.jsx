@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { useLoaderData } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
@@ -41,6 +42,9 @@ const UpdateMyToy = () => {
   }
   return (
     <div className=' w-11/12 md:w-1/2 lg:w-1/3 mx-auto mt-20'>
+      <Helmet>
+        <title>Infinity | Update</title>
+      </Helmet>
       <form onSubmit={handleUpdate}>
         <div className='grid md:grid-cols-2 md:gap-6'>
           <div className='relative z-0 w-full mb-6 group'>
