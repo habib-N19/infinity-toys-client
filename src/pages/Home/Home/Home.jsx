@@ -6,8 +6,12 @@ import TopToys from '../TopToys/TopToys'
 import SubCategory from '../SubCategory/SubCategory'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
+  ;<Helmet>
+    <title>Home</title>
+  </Helmet>
   useEffect(() => {
     AOS.init()
   }, [])

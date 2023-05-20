@@ -69,31 +69,38 @@ const NavigationBar = () => {
           </Link>
           <div className='flex md:order-2'>
             {user && (
-              <img
-                className='w-10 h-10 mr-2 rounded-full'
-                src={user?.photoURL}
-                alt='user photo'
-              />
-            )}
-            {user ? (
-              <button
-                onClick={handleLogOut}
-                type='button'
-                className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              <div
+                className='tooltip tooltip-bottom avatar'
+                data-tip={user?.displayName}
               >
-                Log Out
-              </button>
-            ) : (
-              <Link to='/login'>
-                {' '}
-                <button
-                  type='button'
-                  className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-                >
-                  Sign In
-                </button>
-              </Link>
+                <img
+                  className=' w-10 mr-4 rounded-full'
+                  src={user?.photoURL}
+                  alt='user photo'
+                />
+              </div>
             )}
+            <div className='ml-4'>
+              {user ? (
+                <button
+                  onClick={handleLogOut}
+                  type='button'
+                  className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                >
+                  Log Out
+                </button>
+              ) : (
+                <Link to='/login'>
+                  {' '}
+                  <button
+                    type='button'
+                    className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  >
+                    Sign In
+                  </button>
+                </Link>
+              )}
+            </div>
 
             <div className='dropdown w-full'>
               <label tabIndex={0} className='btn btn-ghost md:hidden'>
