@@ -19,7 +19,7 @@ const SubCategory = () => {
     // console.log(data)
   }
   return (
-    <div className='w-10/12 mx-auto'>
+    <div className='w-10/12 mx-auto mt-20'>
       <h2 className='text-xl mb-4 '>Explore Toys from different category</h2>
       <Tabs>
         <TabList>
@@ -31,10 +31,10 @@ const SubCategory = () => {
         <TabPanel>
           <div className='flex gap-4'>
             {toyData.map(t => (
-              <div key={t._id}>
+              <div key={t._id} data-aos='fade-up'>
                 <div className='w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
                   <img
-                    className='p-8 rounded-t-lg'
+                    className='p-8 h-[300px] rounded rounded-t-lg'
                     src={t.photo}
                     alt='product image'
                   />
@@ -65,10 +65,10 @@ const SubCategory = () => {
         <TabPanel>
           <div className='flex gap-4'>
             {toyData.map(t => (
-              <div key={t._id}>
+              <div key={t._id} data-aos='fade-up'>
                 <div className='w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
                   <img
-                    className='p-8 rounded-t-lg'
+                    className='p-8 h-[300px] rounded rounded-t-lg'
                     src={t.photo}
                     alt='product image'
                   />
@@ -99,10 +99,10 @@ const SubCategory = () => {
         <TabPanel>
           <div className='flex gap-4'>
             {toyData.map(t => (
-              <div key={t._id}>
+              <div key={t._id} data-aos='fade-up'>
                 <div className='w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
                   <img
-                    className='p-8 rounded-t-lg'
+                    className='p-8 h-[300px] rounded rounded-t-lg'
                     src={t.photo}
                     alt='product image'
                   />
