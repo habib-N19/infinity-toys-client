@@ -7,7 +7,9 @@ const SubCategory = () => {
   const [toyData, setToyData] = useState([])
   const [category, setCategory] = useState('iron-man')
   useEffect(() => {
-    fetch(`http://localhost:5000/category?subCategory=${category}`)
+    fetch(
+      `https://infinity-toy-store-server.vercel.app/category?subCategory=${category}`
+    )
       .then(res => res.json())
       .then(data => {
         console.log(data)

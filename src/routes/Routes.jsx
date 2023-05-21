@@ -50,7 +50,8 @@ const router = createBrowserRouter([
       {
         path: '/allToys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/allToys')
+        loader: () =>
+          fetch('https://infinity-toy-store-server.vercel.app/allToys')
       },
       {
         path: '/allToys/:id',
@@ -60,7 +61,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allToys/${params.id}`)
+          fetch(
+            `https://infinity-toy-store-server.vercel.app/allToys/${params.id}`
+          )
       },
       {
         path: '/myToys',
@@ -78,7 +81,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/myToys/${params.id}`)
+          fetch(
+            `https://infinity-toy-store-server.vercel.app/myToys/${params.id}`
+          )
       }
     ]
   }

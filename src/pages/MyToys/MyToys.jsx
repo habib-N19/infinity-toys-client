@@ -9,7 +9,7 @@ const MyToys = () => {
   const [myToys, setMyToys] = useState([])
   const [sort, setSort] = useState('')
   useEffect(() => {
-    const url = `http://localhost:5000/myToys?email=${user.email}&sort=${sort}`
+    const url = `https://infinity-toy-store-server.vercel.app/myToys?email=${user.email}&sort=${sort}`
     fetch(url, {
       method: 'GET'
     })
@@ -42,7 +42,7 @@ const MyToys = () => {
       })
       .then(result => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/myToys/${id}`, {
+          fetch(`https://infinity-toy-store-server.vercel.app/myToys/${id}`, {
             method: 'DELETE'
           })
             .then(res => res.json())

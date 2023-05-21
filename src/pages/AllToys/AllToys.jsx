@@ -10,7 +10,7 @@ const AllToys = () => {
 
   const handleSearch = () => {
     if (search.trim() !== '') {
-      fetch(`http://localhost:5000/searchToy/${search}`)
+      fetch(`https://infinity-toy-store-server.vercel.app/searchToy/${search}`)
         .then(res => res.json())
         .then(data => {
           console.log(data)
