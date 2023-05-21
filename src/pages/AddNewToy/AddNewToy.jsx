@@ -48,7 +48,7 @@ const AddNewToy = () => {
             confirmButtonText: 'Okay'
           })
         }
-        form.reset()
+        // form.reset()
       })
   }
   return (

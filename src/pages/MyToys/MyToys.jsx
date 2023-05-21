@@ -7,14 +7,19 @@ import { Helmet } from 'react-helmet'
 const MyToys = () => {
   const { user } = useContext(AuthContext)
   const [myToys, setMyToys] = useState([])
-  const url = `http://localhost:5000/myToys?email=${user.email}`
+  const [sort, setSort] = useState('')
   useEffect(() => {
+    const url = `http://localhost:5000/myToys?email=${user.email}&sort=${sort}`
     fetch(url, {
       method: 'GET'
     })
       .then(res => res.json())
-      .then(data => setMyToys(data))
-  }, [])
+      .then(data => {
+        setMyToys(data)
+        console.log(data)
+      })
+  }, [user.email, sort])
+
   //   deleting a item and updating the site without reloading it
   const handleToyDelete = id => {
     const swalWithBootstrapButtons = Swal.mixin({
@@ -62,12 +67,39 @@ const MyToys = () => {
         }
       })
   }
+  //   sorting
+  const handleSortAscending = () => {
+    setSort('asc')
+  }
+  const handleSortDescending = () => {
+    setSort('des')
+  }
   return (
     <div>
       <Helmet>
         <title>Infinity | MyToys</title>
       </Helmet>
       <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
+        <div className='dropdown dropdown-hover ml-10 my-5'>
+          <label tabIndex={0} className='btn'>
+            Sort
+          </label>
+          <ul
+            tabIndex={0}
+            className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
+          >
+            <li>
+              <button className='' onClick={handleSortDescending}>
+                By price descending
+              </button>
+            </li>
+            <li>
+              <button className='' onClick={handleSortAscending}>
+                By price ascending
+              </button>
+            </li>
+          </ul>
+        </div>
         <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
           <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
             <tr>

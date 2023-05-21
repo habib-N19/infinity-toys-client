@@ -1,12 +1,15 @@
 import React, { useContext } from 'react'
 import { FaEnvelope, FaUserEdit, FaUserShield } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Providers/AuthProvider'
 import SocialLogin from '../shared/SocialLogin/SocialLogin'
 import { Helmet } from 'react-helmet'
 
 const Login = () => {
   const { signInWithEmail } = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const from = location.state?.from.pathname || '/'
   const handleLogIn = event => {
     event.preventDefault()
     const form = event.target
@@ -16,6 +19,7 @@ const Login = () => {
       .then(result => {
         const user = result.user
         console.log(user)
+        navigate(from, { replace: true })
       })
       .catch(error => console.error(error))
   }

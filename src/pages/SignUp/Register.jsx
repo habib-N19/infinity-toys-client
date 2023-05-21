@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { FaEnvelope, FaImage, FaUserEdit, FaUserShield } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Providers/AuthProvider'
 import SocialLogin from '../shared/SocialLogin/SocialLogin'
 import { Helmet } from 'react-helmet'
 const Register = () => {
-  const { createUserWithEmail } = useContext(AuthContext)
+  const { createUserWithEmail, logOut } = useContext(AuthContext)
+  const navigate = useNavigate()
   const handleSignUp = event => {
     event.preventDefault()
     const form = event.target
@@ -16,6 +17,8 @@ const Register = () => {
       .then(result => {
         const user = result.user
         console.log(user)
+        logOut()
+        navigate('/login')
       })
       .catch(error => console.error(error))
   }

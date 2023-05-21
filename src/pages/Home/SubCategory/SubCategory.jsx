@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const SubCategory = () => {
   const [toyData, setToyData] = useState([])
-  const [category, setCategory] = useState('marvel ')
+  const [category, setCategory] = useState('iron-man')
   useEffect(() => {
     fetch(`http://localhost:5000/category?subCategory=${category}`)
       .then(res => res.json())
@@ -20,11 +20,12 @@ const SubCategory = () => {
   }
   return (
     <div className='w-10/12 mx-auto'>
+      <h2 className='text-xl mb-4 '>Explore Toys from different category</h2>
       <Tabs>
         <TabList>
-          <Tab onClick={() => handleCategory('marvel')}>Marvel</Tab>
-          <Tab onClick={() => handleCategory('marvel')}>Marvel</Tab>
-          <Tab onClick={() => handleCategory('marvelss')}>Marvel</Tab>
+          <Tab onClick={() => handleCategory('iron-man')}>Iron Man</Tab>
+          <Tab onClick={() => handleCategory('spider-man')}>Spider Man</Tab>
+          <Tab onClick={() => handleCategory('thor')}>Thor</Tab>
         </TabList>
 
         <TabPanel>

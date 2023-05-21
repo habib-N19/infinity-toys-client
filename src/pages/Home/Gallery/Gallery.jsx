@@ -8,44 +8,21 @@ const Gallery = () => {
           <div data-aos='fade-right'>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg'
+              src=' https://i.ibb.co/fN4Y1Td/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg'
+              src='https://i.ibb.co/mzbvqhP/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg'
-              alt=''
-            />
-          </div>
-        </div>
-        <div className='grid gap-4'>
-          <div>
-            <img
-              className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg'
-              alt=''
-            />
-          </div>
-          <div>
-            <img
-              className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg'
-              alt=''
-            />
-          </div>
-          <div>
-            <img
-              className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg'
+              src='https://i.ibb.co/87KfdbN/image.png'
               alt=''
             />
           </div>
@@ -54,21 +31,21 @@ const Gallery = () => {
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg'
+              src='https://i.ibb.co/6wcKVVG/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg'
+              src='https://i.ibb.co/f1G3Hrp/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg'
+              src='https://i.ibb.co/P5MxHwV/image.png'
               alt=''
             />
           </div>
@@ -77,22 +54,44 @@ const Gallery = () => {
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg'
+              src='https://i.ibb.co/H4CBkSy/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg'
+              src='https://i.ibb.co/pyqKBzL/image.png'
               alt=''
             />
           </div>
           <div>
             <img
               className='h-auto max-w-full rounded-lg'
-              src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg'
+              src='https://i.ibb.co/ccwYfy5/image.png'
               alt=''
+            />
+          </div>
+        </div>
+        <div className='grid gap-4'>
+          <div>
+            <img
+              className='h-auto max-w-full rounded-lg'
+              src='https://i.ibb.co/P5MxHwV/image.png'
+              alt=''
+            />
+          </div>
+          <div>
+            <img
+              className='h-auto max-w-full rounded-lg'
+              src='https://i.ibb.co/L0pXRWr/image.png'
+              alt=''
+            />
+          </div>
+          <div>
+            <img
+              className='h-auto max-w-full rounded-lg'
+              src='https://i.ibb.co/thFRChk/image.png'
             />
           </div>
         </div>
